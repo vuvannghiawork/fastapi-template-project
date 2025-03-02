@@ -3,10 +3,11 @@ from loguru import logger
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from utils.lifespan import lifespan
 from index_router import index_router
 
 
-app = FastAPI()
+app = FastAPI(lifespan=lifespan)
 
 
 app.add_middleware(
