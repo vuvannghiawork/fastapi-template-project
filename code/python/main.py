@@ -3,6 +3,7 @@ from loguru import logger
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from index_router import index_router
 
 
 app = FastAPI()
@@ -17,8 +18,7 @@ app.add_middleware(
 )
 
 
-# from index_router import index_router
-# app.include_router(index_router, prefix="/api")
+app.include_router(index_router, prefix="/api")
 
 
 @app.get("/")
