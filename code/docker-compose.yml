@@ -6,6 +6,10 @@ services:
     environment:
       - PYTHONUNBUFFERED=1 # Prevents Python from buffering stdout and stderr
       - PYTHONDONTWRITEBYTECODE=1 # Prevents Python from writing .pyc files
+      - FASTAPI_ENVIRONMENT=DEVELOPMENT
+      - SERVER_IP=0.0.0.0
+      - SERVER_PORT=8000
+
     volumes:
       - "./python:/app"
     ports:
