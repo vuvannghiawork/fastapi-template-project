@@ -1,1 +1,12 @@
-# fastapi-template-project
+
+
+
+
+http://localhost:8000
+
+
+
+
+
+
+
