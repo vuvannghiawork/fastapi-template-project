@@ -1,0 +1,12 @@
+services:
+  python:
+    build:
+      context: "./python"
+      dockerfile: "Dockerfile"
+    environment:
+      - PYTHONUNBUFFERED=1 # Prevents Python from buffering stdout and stderr
+      - PYTHONDONTWRITEBYTECODE=1 # Prevents Python from writing .pyc files
+    volumes:
+      - "./python:/app"
+    ports:
+      - "8000:8000"
